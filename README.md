@@ -26,7 +26,7 @@ The Reality Mining project was conducted from 2004-2005 at the MIT Media Laborat
 
 | Task | Technique |
 |------|-----------|
-| Graph Construction | NetworkX Graph from relational data |
+| Graph Creation | NetworkX Graph from relational data |
 | Community Detection | Louvain, HDBSCAN |
 | Influence Estimation | Degree Centrality |
 | Behavioral Embeddings | Node2Vec |
@@ -62,7 +62,7 @@ The Reality Mining project was conducted from 2004-2005 at the MIT Media Laborat
 ---
 
 ## Saved Artifacts
-- `graph.pkl` – Full interaction graph
+- `graph.pkl` – Full interaction graph (Will upload later)
 - `subgraph.pkl` – Pruned graph (degree-based subgraph)
 - `node2vec.pkl` – Embedding model
 
@@ -71,7 +71,7 @@ The Reality Mining project was conducted from 2004-2005 at the MIT Media Laborat
 ## Planned Enhancements
 - Add real-time GraphDB integration (Targeting Neo4j)
 - Exploring other relevant algorithms for the outcomes planned (time-series, Clustering, Neural Network)
-- Extend GraphRAG to multimodal queries (call summaries, maps)
+- Enhance GraphRAG techniques for better response
 
 ---
 
