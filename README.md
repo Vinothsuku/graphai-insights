@@ -103,7 +103,5 @@ Subjects were from two academic programs and observed for nine months.
 
 ## Credits
 
-@2025 Vinoth Sukumaran - used python, NetworkX, Louvain, Node2Vec, Agglomerative Clustering, PCA, plotly, matplotlib, Langchain and OpenAI LLMs.
-
-Dataset used - [Link to the dataset](http://realitycommons.media.mit.edu/realitymining.html)
+MIT Reality Mining Dataset  - [Link to the dataset](http://realitycommons.media.mit.edu/realitymining.html)
 
