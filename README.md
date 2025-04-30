@@ -4,60 +4,86 @@
 
 This work is intended to transform raw telecom interaction data (MIT Dataset) into a **knowledge rich graph**, enabling  insights using **graph algorithms**, **embeddings**, and **LLMs (GraphRAG)**.
 
-**Goal:**
-- Given data on people, devices, phones, call records, and cell tower logs:
-  - Identify influential individuals
-  - Predict churn propensity using call activity and network centrality
-  - Explore behavioral clusters to understand engagement & buying intent
-  - Extract location-based signals through cell tower usage
-  - Enable GraphRAG: interactive LLM-powered querying over graph insights
+**Goals**
+- Ingest and model person-device-tower-phone interactions as a graph
+- Identify influential individuals via network centrality
+- Detect churn risks based on temporal and structural patterns
+- Discover behavioral clusters using unsupervised techniques
+- Derive mobility and social signals through tower usage and call patterns
+- Enable LLM-driven querying over graph data (GraphRAG)
 
 ---
 ## About Dataset
-The Reality Mining project was conducted from 2004-2005 at the MIT Media Laboratory. The Reality Mining study followed ninety-four subjects using mobile phones pre-installed with several pieces of software that recorded and sent the researcher data about call logs, Bluetooth devices in proximity of approximately five meters, cell tower IDs, application usage, and phone status. Subjects were observed using these measurements over the course of nine months and included students and faculty from two programs within a major research institution. We also collected self-report relational data from each individual, where subjects were asked about their proximity to, and friendship with, others
+The Reality Mining project was conducted from 2004–2005 at the MIT Media Lab. It tracked 94 individuals via mobile devices pre-installed with software that captured:
+- Call logs
+- Bluetooth proximity (approx. 5 meters)
+- Cell tower IDs
+- Application usage
+- Phone status
+
+Subjects were from two academic programs and observed for nine months.
+
 [Link to the dataset](http://realitycommons.media.mit.edu/realitymining.html)
 
 ## Data Sources
-- `person`, `device`, `phonenumber`, `celltower` tables
-- Call records and activity spans (e.g., person-device-tower interactions)
+- Relational tables: `person`, `device`, `phonenumber`, `celltower`
+- Interactions: Call logs, proximity detections, location-based movements
+
 ---
 
 ## Techniques
 
 | Task | Technique |
 |------|-----------|
-| Graph Creation | NetworkX Graph from relational data |
-| Community Detection | Louvain, HDBSCAN |
+| Graph Creation | Build multi-node interaction graph with NetworkX |
+| Embeddings | Node2Vec |
+| Community Detection | Louvain, Agglomerative Clustering |
 | Influence Estimation | Degree Centrality |
-| Behavioral Embeddings | Node2Vec |
-| Clustering | HDBSCAN on embeddings |
+| Visualization | PCA + Matplotlib + Plotly |
+| Clustering | Agglomerative Clustering on embeddings |
 | Churn Detection | Drop-off in call activity + low centrality |
-| Visualization | PCA + Matplotlib |
+| Location Patterns | Analyze tower usage per person & per cluster |
 | LLM Integration | LangChain + OpenAI for GraphRAG |
 
 ---
 
-## Key Outcomes
+## Key Functionalities
+
+### Graph Creation
+- Nodes: Person, Device, Phone, Tower
+- Edges: Calls, proximity events, device-tower mappings
+- Network built using NetworkX
+
+### Embedding & Clustering
+- Node2Vec → behavior embeddings
+- Louvain → community detection
+- PCA → 2D visualization of clusters
+
+### Influence Analysis
+- Degree centrality used to rank influential individuals
+- Subgraph pruning for top influencers
 
 ### Community & Influence Analysis
 - Identified **influential individuals** (based on degree + cluster)
-- Found **engagement clusters** via HDBSCAN and Node2Vec embeddings
+- Found **engagement clusters** via Agglomerative Clustering and Node2Vec embeddings
 - Example clusters:
   - Cluster 2: 937 devices, 570 towers
   - Cluster 3: 1035 devices, 1324 towers
+    
+### Churn Prediction
+- Drop in monthly call volume + low degree centrality
+- Output: List of churn-likely users
 
-### Churn Propensity
-- People with **call activity drop-off** and low centrality marked as churn risks
+### Location Insights
+- Aggregate tower interactions by person and cluster
+- Extract mobility behavior and geographic footprint
 
-### Location based Insights
-- Aggregated tower usage per cluster and per person
-- Derived mobility and behavioral patterns tied to geography
-
-### Q&A - GraphRAG
-- Interactive question-answering over the graph using LangChain + OpenAI
-- Answered queries like:
-  - "Who are the top influencers in cluster X?"
-  - "Which person is likely to churn next month?"
+### GraphRAG: LLM Q&A
+- Use LangChain + OpenAI to answer questions on:
+  - Top influencers
+  - Likely churners
+  - Cluster characteristics
+- Graph context embedded for LLM responses
 
 ---
 
