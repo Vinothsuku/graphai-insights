@@ -4,7 +4,7 @@
 
 This project transforms raw telecom interaction data (MIT Dataset) into a **knowledge-rich graph**, enabling powerful insights using **graph algorithms**, **embeddings**, and **LLMs (GraphRAG)**.
 
-** Goal:**
+**Goal:**
 - Given data on people, devices, phones, call records, and cell tower logs:
   - Identify influential individuals ("circle of influence")
   - Predict churn propensity using call activity and network centrality
@@ -22,7 +22,7 @@ The Reality Mining project was conducted from 2004-2005 at the MIT Media Laborat
 - Call records and activity spans (e.g., person-device-tower interactions)
 ---
 
-## Techniques Used
+## Techniques
 
 | Task | Technique |
 |------|-----------|
@@ -47,14 +47,13 @@ The Reality Mining project was conducted from 2004-2005 at the MIT Media Laborat
   - Cluster 3: 1035 devices, 1324 towers
 
 ### Churn Propensity
-- People with **call activity drop-offs** and low centrality marked as churn risks
-- Enabled proactive churn targeting
+- People with **call activity drop-off** and low centrality marked as churn risks
 
-### Location-Based Insights
+### Location based Insights
 - Aggregated tower usage per cluster and per person
 - Derived mobility and behavioral patterns tied to geography
 
-### GraphRAG Querying
+### Q&A - GraphRAG
 - Interactive question-answering over the graph using LangChain + OpenAI
 - Answered queries like:
   - "Who are the top influencers in cluster X?"
@@ -69,16 +68,16 @@ The Reality Mining project was conducted from 2004-2005 at the MIT Media Laborat
 
 ---
 
-## Future Enhancements
-- Add real-time GraphDB integration (e.g., Neo4j)
-- - Integrate time-series modeling for churn prediction
-- Extend GraphRAG to multimodal queries (e.g., call summaries, maps)
+## Planned Enhancements
+- Add real-time GraphDB integration (Targeting Neo4j)
+- Exploring other relevant algorithms for the outcomes planned (time-series, Clustering, Neural Network)
+- Extend GraphRAG to multimodal queries (call summaries, maps)
 
 ---
 
 ## Credits
 
-@2025 Vinoth Sukumaran - using Python, NetworkX, Node2Vec, HDBSCAN, and OpenAI's LLMs.
+@2025 Vinoth Sukumaran - used Python, NetworkX, Louvain, Node2Vec, HDBSCAN, and OpenAI's LLMs.
 
 Dataset used - [Link to the dataset](http://realitycommons.media.mit.edu/realitymining.html)
 
