@@ -42,7 +42,7 @@ Subjects were from two academic programs and observed for nine months.
 | Visualization | PCA + Matplotlib + Plotly |
 | Clustering | Agglomerative Clustering on embeddings |
 | Churn Detection | Drop-off in call activity + low centrality |
-| Location Patterns | Analyze tower usage per person & per cluster |
+| Location Patterns | Analyze tower usage per person categorized by Time |
 | LLM Integration | LangChain + OpenAI for GraphRAG |
 
 ---
