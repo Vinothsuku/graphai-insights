@@ -79,5 +79,6 @@ The Reality Mining project was conducted from 2004-2005 at the MIT Media Laborat
 ## Credits
 
 @2025 Vinoth Sukumaran - using Python, NetworkX, Node2Vec, HDBSCAN, and OpenAI's LLMs.
+
 Dataset used - [Link to the dataset](http://realitycommons.media.mit.edu/realitymining.html)
 
