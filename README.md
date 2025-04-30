@@ -101,7 +101,3 @@ Subjects were from two academic programs and observed for nine months.
 
 ---
 
-## Credits
-
-MIT Reality Mining Dataset  - [Link to the dataset](http://realitycommons.media.mit.edu/realitymining.html)
-
