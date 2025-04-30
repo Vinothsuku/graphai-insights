@@ -88,7 +88,7 @@ Subjects were from two academic programs and observed for nine months.
 ---
 
 ## Saved Artifacts
-- `graph.pkl` – Full interaction graph (Will upload later)
+- `graph.pkl` – Full interaction graph (will upload later)
 - `subgraph.pkl` – Pruned graph (degree-based subgraph)
 - `node2vec.pkl` – Embedding model
 
@@ -103,7 +103,7 @@ Subjects were from two academic programs and observed for nine months.
 
 ## Credits
 
-@2025 Vinoth Sukumaran - used Python, NetworkX, Louvain, Node2Vec, HDBSCAN, and OpenAI's LLMs.
+@2025 Vinoth Sukumaran - used python, NetworkX, Louvain, Node2Vec, Agglomerative Clustering, PCA, plotly, matplotlib, Langchain and OpenAI LLMs.
 
 Dataset used - [Link to the dataset](http://realitycommons.media.mit.edu/realitymining.html)
 
