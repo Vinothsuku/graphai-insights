@@ -2,11 +2,11 @@
 
 ## Overview
 
-This project transforms raw telecom interaction data (MIT Dataset) into a **knowledge-rich graph**, enabling powerful insights using **graph algorithms**, **embeddings**, and **LLMs (GraphRAG)**.
+This work is intended to transform raw telecom interaction data (MIT Dataset) into a **knowledge rich graph**, enabling  insights using **graph algorithms**, **embeddings**, and **LLMs (GraphRAG)**.
 
 **Goal:**
 - Given data on people, devices, phones, call records, and cell tower logs:
-  - Identify influential individuals ("circle of influence")
+  - Identify influential individuals
   - Predict churn propensity using call activity and network centrality
   - Explore behavioral clusters to understand engagement & buying intent
   - Extract location-based signals through cell tower usage
